@@ -1,0 +1,358 @@
+
+/* ---- main container ---- */
+.container{
+	width: 1170px;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+}
+.container-fluid{
+	width: 100%;
+	padding-left: 15px;
+	padding-right: 15px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+/* --- padding -- */
+.pl-0{
+	padding-left: 0px !important;
+}
+.pr-0{
+	padding-right: 0px !important;
+}
+.pt-0{
+	padding-top: 0px !important;
+}
+.pb-0{
+	padding-bottom: 0px !important;
+}
+.p-0{
+	padding: 0px !important;
+}
+
+/* --- flex align -- */
+.justify-content-start{
+	justify-content: flex-start !important;
+}
+.justify-content-center{
+	justify-content: center !important;
+}
+.justify-content-end{
+	justify-content: flex-end !important;
+}
+.justify-content-between{
+	justify-content: space-between !important; 
+}
+.justify-content-around{
+	justify-content: space-around !important; 
+}
+
+.align-items-start{
+	align-items: flex-start !important;
+}
+.align-items-center{
+	align-items: center !important;
+}
+.align-items-end{
+	align-items: flex-end !important;
+}
+.align-items-baseline{
+	align-items: baseline !important;
+}
+
+.btns{
+	display: inline-block;
+	font-size: 14px;
+	color: #fff;
+    text-decoration: none;
+    border: solid 2px #cda45e;
+    border-radius: 25px;
+    padding: 8px 25px;
+    line-height: 20px;
+    text-transform: uppercase;
+}
+
+/* === Headerv style ==== */
+.header-top{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 99;
+	
+}
+
+.header-info{
+	background-color: rgb(34 34 34 / 38%);
+	padding: 15px 0;
+}
+.top-info{
+	width: 70%;	
+}
+.top-info ul{
+	list-style: none;
+}
+.top-info ul li{
+	color: #fff;
+	font-size: 14px;
+	display: inline-block;
+	margin-right: 8px;
+}
+.language{
+	width: 30%;
+	text-align: right;
+	color: #fff;
+}
+.language a{
+	color: #fff;
+		text-decoration: none;
+		font-size: 14px;
+}
+
+.header-menu{
+	background-color: rgb(0 0 0 / 68%);
+}
+.logo{
+	width: 18%;
+	
+}
+.logo a{
+	display: inline-block;
+	text-decoration: none;
+	color: #fff;
+	font-size:24px;
+	line-height: 20px;
+    text-transform: uppercase;
+    padding: 15px 0 15px 0;
+}
+.menu{
+	width: 62%;
+	display: flex;
+	justify-content: flex-end;
+	padding-right: 10px;
+}
+.navbar{
+	list-style: none;
+}
+.navbar li{
+	display: inline-block;
+}
+.navbar li a{
+	text-decoration: none;
+	color: #fff;
+	display: block;
+	font-size: 14px;
+	padding: 18px 10px;
+}
+.menu-btn{
+	width: 20%;
+	text-align: right;
+}
+
+/*.menu-btn a{
+	display: inline-block;
+	font-size: 14px;
+	color: #fff;
+    text-decoration: none;
+    border: solid 2px #ffc107;
+    border-radius: 25px;
+    padding: 8px 25px;
+    line-height: 20px;
+}*/
+
+/* ---- Banner section ---- */
+.banner-section{
+	background-image: linear-gradient(rgb(0 0 0 / 48%), rgb(0 0 0 / 48%)), url(../images/hero-bg.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	padding: 300px 0;
+}
+.banner-content {
+	position: relative;
+	width: 100%;
+}
+.banner-content h1{
+	color: #fff;
+	font-size: 50px;
+	margin-bottom: 10px;
+}
+.banner-content h3{
+	color: #ccc;
+	font-size: 20px;
+	margin-bottom: 30px;
+}
+.banner-content > a{
+	margin-right: 15px;
+}
+
+.banner-play-btn{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 50%;
+	right: 10%;
+	transform: translateY(-50%);
+	/*border: solid 2px #cda45e;*/
+	width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    background: rgb(205 164 94 / 40%);
+    overflow: hidden;
+}
+.banner-play-btn:after{
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	border: solid 2px #cda45e;
+	border-radius: 100%;
+	transform: scale(0);
+	
+	/*transition: all 3s ease;*/
+	transform-origin: center center;
+	box-sizing: border-box;
+	animation-name: puls;
+	animation-duration: 3s;
+	animation-delay: 0.5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-out;
+}
+
+@keyframes puls{
+	0%{
+		transform: scale(0);
+		
+	}
+	100%{
+		transform: scale(1.5);
+		
+	}
+}
+
+.banner-play-btn a{
+	text-decoration: none;
+	color: #fff;
+	width: 65px;
+	height: 65px;
+	background-color: #cda45e;
+	border-radius: 100%;
+	text-align: center;
+	line-height: 65px;
+	font-size: 18px;
+}
+/* ---  About section --- */
+.about-section{
+	padding: 40px 0;
+}
+.abt-cont{
+	width: 50%;
+	height: 450px;
+	background-color: lightblue;
+}
+.abt-img{
+	width: 50%;
+	height: 450px;
+	background-color: blue;
+}
+
+
+/* --- Why Us section --- */
+.why-us-section{
+	padding: 40px 0;
+	background-color: #0c0b09;
+}
+.sect-title{
+	width: 100%;
+	padding: 0 15px;
+}
+.sect-title h4{
+	position: relative;
+	color: #aaaaaa;
+	font-size: 14px;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+.sect-title h4:after{
+	content: "";
+	width: 100px;
+	height: 1px;
+	background-color: #aaaaaa;
+	position: absolute;
+    top: 8px;
+    margin-left: 10px;
+}
+.sect-title h2{
+	color: #cda45e;
+	font-size: 30px;
+	margin-top: 10px;
+	margin-bottom: 40px;
+}
+.why-boxs{
+	width: 33.33%;
+	padding: 0 15px;
+}
+.why-us-content {
+	background-color: #1a1814;
+	padding: 30px 15px 20px;
+	transition: all 1s ease;
+}
+.why-us-content:hover{
+	background-color: #cda45e;
+}
+.why-us-content span{
+	color: #cda45e;
+	display: inline-block;
+	padding-bottom: 20px;
+	font-size: 22px;
+	transition: all 1s ease;
+}
+.why-us-content h4{
+	font-size: 25px;
+	color: #fff;
+	padding-bottom: 20px;
+	transition: all 1s ease;
+}
+.why-us-content p{
+	font-size: 14px;
+	color: #fff;
+	transition: all 1s ease;
+}
+.why-us-content:hover span,
+.why-us-content:hover h4, 
+.why-us-content:hover p{
+	transform: translateY(-20px);
+	color: #fff;
+} 
+/* ---- Food section ---- */
+.food-items{
+	padding: 40px 0;
+}
+.food-title{
+	width: 100%;
+	height: 30px;
+	background-color: #cda45e;
+}
+.food-menus{
+	width: 50%;
+	border:solid 1px red;
+	display: flex;
+	flex-wrap: wrap;
+	padding: 10px;
+}
+.food-menus .food-img{
+	width: 80px;
+	height: 80px;
+	border-radius: 100%;
+	border:solid 1px blue; 
+}
+.food-menus .food-content{
+	flex-grow: 1;
+	border:solid 1px red; 
+}
